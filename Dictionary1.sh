@@ -1,0 +1,15 @@
+#!/bin/bash -x
+
+read -p "Enter first number" a
+read -p "Enter second number" b
+read -p "Enter third number" c
+
+p=$(($a+$b*$c))
+q=$(($a*$b+$c))
+r=$(($c+$a/$b))
+s=$(($a%$b+$c))
+
+dictionary["a+b*c"]=$p
+dictionary["a*b+c"]=$q
+dictionary["c+a/b"]=$r
+dictionary["a%b+c"]=$s
